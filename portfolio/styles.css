@@ -1,0 +1,157 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #1db954;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  flex: 1;
+}
+
+.hero-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 1s forwards;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+.cloud-badge {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 1s forwards 0.7s;
+}
+
+.projects, .resume {
+  padding: 20px;
+  flex: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 50px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.project-list, .resume ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-item, .resume li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.project-item:nth-child(even), .resume li:nth-child(even) {
+  animation-delay: 0.3s;
+}
+
+.project-item:nth-child(odd), .resume li:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+/* Add styles for project images */
+/* Add styles for project images */
+.project-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.project-images img {
+  max-width: 10%; /* Set maximum width to 100% of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+
